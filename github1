@@ -1,0 +1,203 @@
+*ls:>>> this command is use to list the files and directories.
+*pwd:>> this command is use to check the present working directory.
+*git --version:>> this command is use to check the version.
+*git config --help:>> this command is use to set git configuration values on a      local value.
+*git init:>> this command is use to creayte a empty local repository.
+*mkdir filename:>> this command is use to create a file.
+*cd filename:>> this command is use to enter into the file.
+*git status:>> this command is use to check the status.
+*git add filename:>> this is used to move the file to untrack to track or working t o stagging area.
+*git commut -m "content":>>> this is used to commit a file.
+*git log --oneline:>> this is used to show result in oneline.
+*git config --global user.email:>> this is ud=se to link git to github.
+
+Removing files:
+*vim filename:>> this is use to create a file.
+*ls:>> this is use to list the files.
+*git init:>> this is used to create the empty local repositories.
+*git add filename:>> to add all the files in staging.
+*git commit -m:>> commiting in first round staging or storing all the files into th e local repository.
+*git status
+*ls
+*git ls-files:>> to show all the files in stagging area.
+*git rm filename:>> to remove files from both staging and working directory.
+*ls:>> to check wheather files are deleted or not.
+*git rm -r:>> to remove all the files from both staging and working directory.
+*git rm --cached filename:>> to remove files only from stging.
+*ls:>> to check in working directory wheather the file exist or not.
+*git ls-files:>> to check in staging area.
+*git rm filename: to remove files only from working directory.
+*git ls-files:>> to check in staging area.
+
+Branching:
+*Open a default directory create a folder like:>> git project.
+*Open a git command prompt type:>> git init
+*To create a file type:>> touch filename.
+*To know wheather the file is created or not type:>> ls[it will show the file name]
+*To add the file into staging mode:>> git add filename.
+*To commit a file:>> git commit -m "filename".
+*To view the branches:>> git branch.
+*To know which is a active branch:>> git status.
+*To create a new branch:>> git branch branchname.
+*Switch from one branch to another branch:>> git checkout branchname.
+*Create and switch to the branch:>> git checkout -b branchname.
+*Again switch to the master branch:>> ls.
+*To switch to a master branch:>> git checkout master.
+*To create the files in it:>> touch "filename" "filename".
+*To list the files from active branch:>> ls.
+*To add the files to a staging and commit a file:>> git add filename;git commit -m  "filename".
+*To know the staging file:>> git ls-files.
+*To know the commited file:>> git log --oneline.
+                              git status.
+			      ls.
+			      git checkout filename.
+			      ls.
+			      git log --oneline.
+			      git branch.
+			      touch "filename" "filename".
+			      git filename;git commit -m "filename".
+			      git filename;git commit -m "filename".
+			      ls
+			      git checkout master.
+			      ls.
+
+Merging:
+      Once we complete the feature branch [new branch] we can merge new branch with maste r branch.
+There are two ways of merging:
+1.Fast forward merge.
+2.Three-way merge.
+
+
+Fast forward merge:
+*In a default directory create a folder:>> gitproject.
+*Open a git bash:>>
+*git init.
+*touch "filename" "filename".
+*git add filename;git commit -m "filename".
+*git add filename;git commit -m "filename".
+*git log --oneline.
+*git branch feature.
+*git branch.
+*git checkout feature.
+*touch "filename" "filename".
+*git add filename;git commit -m "c1f".
+*git add filename;git commit -m "c2f".
+*ls.
+*git log --oneline.
+*git checkout master.
+*git branch.
+*git merge feature.
+*ls.
+*git log --oneline.
+
+Three way merge:
+*mkdir "foldername".
+*cd "foldername".
+*git init.
+*touch "filename" "filename".
+*git add filename;git commit -m "c1m".
+*git add filename;git commit -m "c2m".
+*git log --oneline.
+*git branch.
+*git branch feature.
+*git checkout feature.
+*touch "filename" "filename".
+*git add filename;git commit -m "c1f".
+*git add filename;git commit -m "c1f".
+*git log --oneline.
+*git checkout master.
+*git branch.
+*ls.
+*git log --oneline.
+*touch "filename".
+*git add filename;git commit -m "c3m".
+*ls.
+*git log --oneline.
+*git branch.
+*git merge feature.
+*git log --oneline.
+
+Github:
+        Github is the hosting service for git repositories. Git is the tool, while github is the service to use git.
+
+Creating a Github account:
+*Open google chrome in a search list type "sign in github".
+*Click on sign up button to create a new account in a github.
+*Specify username,email address,password.After specifying the email, a confirmation mail send to your e-mail account.
+*Open your email account,open the confirmation mail and confirm it by clicking on t he link present in a mail.
+*After creating a account click on sign in and provide username and password and click on sign in button.
+*To create a new repository you have two options, first click on new button and sec ond the option "new repository".
+*Mention the repository name like:>> testrepo.
+*If you want your repository can be accessed by anybody select "public" option.
+*Click on create repository button.
+*We get the repository URL by sharing this URL anybody can access your repository.
+*To create a new file in remote repository, click on "creating a new file" link.
+*Specify the filename and mention the link.
+*After writting the content click on "commit new file".
+*To clone the repository into your local system, open the default folder and right  click on the folder and select option "git bash".
+*In git command prompt type:>>
+*git clone "paste the link".
+*git cd "filename".
+*git cd repository name.
+*ls.
+*cat filename.
+*vim filename1.
+*vim filename.
+*git add .
+*git commit -m "content".
+*git log --oneline.
+*git push orgin main.
+*In a remote repository [github] open a file and edit the content.
+*After writting the content click on "commit changes" button.
+*In a git command prompt check the changes or content happen or not and type:>> cat filename.
+*To update the content in local repository:>> git pull origin main.
+
+
+Undo Changes:
+*mkdir foldername.
+*cd foldername.
+*vim filename.
+*git init.
+*git add .
+*git commit -m "first commit".
+*cat filename.
+*vim fileame.
+*cat filename:>> now it happens or is called as unstagged changes.
+*The cahnges which we done at second time is not the part of our stagging so we 
+ discard them:>> git checkout --filename.
+*Finally now it show what we done before with discarding with changes:>> cat 
+ filename.
+
+Collabration:
+      Using collabration concept for single repository [project] we can invite 
+number of users so that we can work together.
+
+*Create a repository add the files.
+*Click on repository add the files.
+*Click on add people button to add the users by specifying username or email id,
+ click on "select a collabrator ".
+*Click on add the user into the repository.
+*Invited user will open the github account, click on profile drop down list and 
+ select the option as "your organization".
+*Click on"join" and next click on "accept invitation" button.
+*The repository will display in the invited user.
+*To copy the repository from remote to local click on "code drop down list" and 
+ copy the URL.
+*Open the git command prompt create a folder right click on a folder and select the option "git bash".
+*git clone "paste the link here".
+*cd.
+*vim filename.
+*git status.
+*git add .
+*git commit -m "content".
+*git push origin main.
+
+Migration:
+*Open the github profile with overview page.
+*Next click on your repository.
+*Click on your profile drop down option and select the import repository option.
+*It will open the page as import your project to github.
+*There paste your old URL of your repository.
+*Next give the repository name.\
+*Click on "being import".
+*Lastly it displays in local repository after importing.
